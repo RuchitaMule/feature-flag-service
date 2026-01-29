@@ -49,7 +49,7 @@ public class FeatureFlagPlatformApplication {
 				project.setDescription("Main backend service");
 				project.setOrganization(org);
 				projectRepo.save(project);
-				System.out.println(" Project inserted");
+				System.out.println("Project inserted");
 			}
 		};
 	}
@@ -69,7 +69,7 @@ public class FeatureFlagPlatformApplication {
 							env.setName(envName);
 							env.setProject(project);
 							envRepo.save(env);
-							System.out.println(" Environment created: " + envName);
+							System.out.println("Environment created: " + envName);
 							return env;
 						});
 			}
@@ -95,7 +95,7 @@ public class FeatureFlagPlatformApplication {
 					key.setEnvironment(env);
 					key.setStatus("ACTIVE");
 					apiKeyRepo.save(key);
-					System.out.println(" API Key generated for " + env.getName());
+					System.out.println("API Key generated for " + env.getName());
 				}
 			});
 		};
@@ -119,7 +119,7 @@ public class FeatureFlagPlatformApplication {
 						f.setDescription("New checkout UI");
 						f.setProject(project);
 						featureRepo.save(f);
-						System.out.println(" Feature created: new_checkout");
+						System.out.println("Feature created: new_checkout");
 						return f;
 					});
 
@@ -134,7 +134,7 @@ public class FeatureFlagPlatformApplication {
 							config.setRolloutType("BOOLEAN");
 							config.setRules(null);
 							featureConfigRepo.save(config);
-							System.out.println("⚙️ FeatureConfig created for " + env.getName());
+							System.out.println("FeatureConfig created for " + env.getName());
 							return config;
 						});
 			});
