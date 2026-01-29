@@ -119,7 +119,7 @@ public class FeatureFlagPlatformApplication {
 						f.setDescription("New checkout UI");
 						f.setProject(project);
 						featureRepo.save(f);
-						System.out.println("Feature created: new_checkout");
+						System.out.println("Feature Created: new_checkout");
 						return f;
 					});
 
@@ -134,7 +134,7 @@ public class FeatureFlagPlatformApplication {
 							config.setRolloutType("BOOLEAN");
 							config.setRules(null);
 							featureConfigRepo.save(config);
-							System.out.println("FeatureConfig created for " + env.getName());
+							System.out.println("FeatureConfig Created for " + env.getName());
 							return config;
 						});
 			});
